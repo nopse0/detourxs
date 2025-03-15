@@ -1,5 +1,10 @@
 #include "detourxs.h"
 
+#pragma warning(push)
+#pragma warning(disable: 4311)
+#pragma warning(disable: 4302)
+#pragma warning(disable: 4244)
+
 DetourXS::DetourXS()
 {
 	m_detourLen = 0;
@@ -201,3 +206,4 @@ DetourXS::JmpType DetourXS::GetJmpType(const LPBYTE lpbFrom, const LPBYTE lpbTo)
 
     return (upper - lower > 0x7FFFFFFF) ? Absolute : Relative;
 }
+#pragma warning(pop)
